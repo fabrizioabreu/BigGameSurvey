@@ -18,7 +18,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_game")
-public class Game implements Serializable {
+public class Game implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -77,7 +77,7 @@ public class Game implements Serializable {
 		this.genre = genre;
 	}
 	
-	public List<Record> getRegords() {
+	public List<Record> getRecords() {
 		return records;
 	}
 
