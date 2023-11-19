@@ -2,6 +2,8 @@ package com.fabrizio.biggamesurvey.services;
 
 import java.time.Instant;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,8 +16,6 @@ import com.fabrizio.biggamesurvey.entities.Game;
 import com.fabrizio.biggamesurvey.entities.Record;
 import com.fabrizio.biggamesurvey.repositories.GameRepository;
 import com.fabrizio.biggamesurvey.repositories.RecordRepository;
-
-import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class RecordService {
