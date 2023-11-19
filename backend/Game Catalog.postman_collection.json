@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "c6313766-fe04-40cd-8b47-d943e30eb4d4",
+		"name": "Ds Meta Game Catalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5543506"
+	},
+	"item": [
+		{
+			"name": "All Games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Records Pag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/records?min=2023-07-01T00:00:00Z&max=2023-07-31T00:00:00Z&page=0&linesPerPage=5&orderBy=moment&direction=DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"records"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "2023-07-01T00:00:00Z"
+						},
+						{
+							"key": "max",
+							"value": "2023-07-31T00:00:00Z"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "linesPerPage",
+							"value": "5"
+						},
+						{
+							"key": "orderBy",
+							"value": "moment"
+						},
+						{
+							"key": "direction",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save new record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fabrizio\",\r\n    \"age\": 35,\r\n    \"gameId\": 1 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"records"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
